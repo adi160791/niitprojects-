@@ -18,7 +18,7 @@
          </tr>   
          <tr>    
           <td>firstName : </td>   
-          <td><form:input path="firstName"  /></td>  
+          <td><form:input path="firstName" pattern="(?=.*[a-z])(?=.*[A-Z])"  /></td>  
          </tr>    
          <tr>    
           <tr>  
@@ -26,21 +26,21 @@
         <td></td>    
          <tr>    
           <td>lastName : </td>   
-          <td><form:input path="lastName"  /></td>  
+          <td><form:input path="lastName"  pattern="(?=.*[a-z])(?=.*[A-Z])" /></td>  
          </tr>      
          <tr>  
         <td></td>    
          <tr>    
           <td>contact : </td>   
-          <td><form:input path="contact"  /></td>  
+          <td><form:input path="contact" pattern="(?=.*\d)" /></td>  
          </tr> 
           <tr>    
           <td>password : </td>   
-          <td><form:input path="password"  /></td>  
+          <td><form:input path="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, one special character [!@#$%&*] and at least 8 or more characters" required /></td>  
          </tr> 
          <tr>    
           <td>useraddress : </td>   
-          <td><form:input path="userAddress"  /></td>  
+          <td><form:input path="userAddress" required="true" /></td>  
          </tr>
          
           <tr>    
@@ -48,7 +48,8 @@
           <td><input type="submit" value="Save" /></td>    
          </tr>  
         </table>    
-       </form:form>    
+       </form:form> 
+          
 </head>
 <body>
 

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<h3 align="center">Login Page</h3>
+<h1 align="center" style="background-color:Orange;">WELCOME TO EKART</h1>
 	<div id="login-box">
 	<c:if test="${error!=null }">
 <div  class="loginerror" > <!--  invalid credentials -->
@@ -36,15 +36,16 @@
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
           <div class="card-body">
-            <h5 class="card-title text-center">Sign In</h5>
+            <h4 class="card-title text-center">Sign In</h4>
             <form class="form-signin" action="<c:url value='/j_spring_security_check'></c:url>" method="post">
               <div class="form-label-group">
-                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                <input type="text" id="username" name="username" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*])" title="Must contain at least one number and one uppercase and lowercase letter, one special character [!@#$%&*]" required placeholder="Username" required autofocus>
+                
                 <label for="username">Username</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" name="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, one special character [!@#$%&*] and at least 8 or more characters" required placeholder="Password" required>
                 <label for="inputPassword">Password</label>
               </div>
 
@@ -55,7 +56,7 @@
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i><a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"> Sign in with Google</a></button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Google</button>
             </form>
           </div>
         </div>
@@ -63,6 +64,7 @@
     </div>
   </div>
 </div>
+
 
 </body>
 </html>

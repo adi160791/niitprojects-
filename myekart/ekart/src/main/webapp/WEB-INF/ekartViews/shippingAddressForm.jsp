@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1>Register New Shipping Address </h1>
+<h1 style="background-color:Green;">Register New Shipping Address </h1>
 <form:form method="post" action="/cart/createorder">
 <table > 
 
@@ -26,34 +26,34 @@
          
          <tr>    
           <td> Apartment Number : </td>   
-          <td><form:input path="apartmentnumber"  /></td>  
+          <td><form:input path="apartmentnumber" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]) (?=.*[/\])"  /></td>  
           
          </tr>    
          
          <tr>    
           <td> Street Name: </td>   
-          <td><form:input path="streetname"  /></td>  
+          <td><form:input path="streetname" required="true" pattern="(?=.*[a-z])(?=.*[A-Z])" /></td>  
          </tr> 
       
          <tr>    
           <td> City : </td>   
-          <td><form:input path="city"  /></td>  
+          <td><form:input path="city" required="true" /></td>  
          </tr>    
          
          <tr>    
           <td> State : </td>   
-          <td><form:input path="state"  /></td>  
+          <td><form:input path="state" required="true" /></td>  
          </tr>  
          
          
          <tr>    
           <td> Country : </td>   
-          <td><form:input path="country"  /></td>  
+          <td><form:input path="country" required="true" /></td>  
          </tr>  
                    
          <tr>    
          <td> Pin Code : </td>   
-         <td><form:input path="zipcode"  /></td>  
+         <td><form:input path="zipcode" pattern="(?=.*\d).{7,} " maxlength="10"/></td>  
          </tr> 
                
          <tr>    

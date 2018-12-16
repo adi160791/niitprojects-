@@ -15,13 +15,13 @@
 </head>
 <body>
 <div class="container">
-	<h3 align="center">Add Product</h3>
+	<h2 align="center" style="background-color:Red;">Add Product</h2>
 	<c:url value="/admin/saveProduct" var="url"></c:url>
        <form:form method="post" action='${url }' modelAttribute="product" role="form" enctype="multipart/form-data">    
     <form:hidden path="productId" />
         <div class="form-group">
 		<form:label path="productName">Enter product Name</form:label>
-		<form:input path="productName" class="form-control" style="width:750px"/>
+		<form:input path="productName" class="form-control" required="true" style="width:750px"/>
 		<form:errors path="productName" cssStyle="color:red"></form:errors>
         </div>
         
@@ -38,7 +38,7 @@
         
         <div class="form-group">
 		<form:label path="price">Enter Price</form:label>
-		<form:input path="price" class="form-control" style="width:750px"/>
+		<form:input path="price" class="form-control" required="true" style="width:750px"/>
 		<form:errors path="price" cssStyle="color:red"></form:errors>
         </div>
         

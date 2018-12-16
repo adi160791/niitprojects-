@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>Product List</h1>  
+<h1 style="background-color:Orange;">Product List</h1>  
 <table border="2" width="70%" cellpadding="2">  
 <tr><th>productId</th><th>productName</th><th>productDesc</th><th>price</th><th>quantity</th><th>productCategory</th><th>image</th></tr>  
 

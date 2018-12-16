@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Category List</h1>  
+<h2 style="background-color:Red;">Category List</h2>   
 <table border="2" width="70%" cellpadding="2">  
 <tr><th>Id</th><th>Name</th></tr>  
 <c:forEach var="category" items="${list}">

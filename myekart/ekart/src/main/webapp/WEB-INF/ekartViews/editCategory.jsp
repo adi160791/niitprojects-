@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>edit Category</h1>  
+<h1 style="color:DodgerBlue;">edit Category</h1>  
        <form:form method="POST" action="/ekart/editsave">    
         <table >    
         <tr>  

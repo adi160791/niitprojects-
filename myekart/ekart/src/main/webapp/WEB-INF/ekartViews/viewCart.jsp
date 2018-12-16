@@ -14,7 +14,7 @@
 </head>
 <body>
 <c:if test="${error!=null}">
-<h3>Product {product.productId} has been removed from cart due to out of stock!!</h3>
+<h1 style="background-color:Blue;">Product {product.productId} has been removed from cart due to out of stock!!</h1>
 </c:if>
 <div>
 <div>
@@ -48,7 +48,7 @@
 <b>Total Price : ${grandTotal }</b>
 </div>
 <c:if test="${empty(listC) }">
-<h3>Your Cart is empty</h3>
+<h3 style="background-color:Red;">Your Cart is empty..Please Add product </h3>
 </c:if>
 
 

@@ -74,7 +74,7 @@
                                     <td></td>
                                     <td></td>
                                     <td class="text-right">
-                                        <h4><strong>Grand Total:</strong></h4>
+                                        <h2 align="center" style="background-color:Red;"><strong>Grand Total:</strong></h2>
                                     </td>
                                     <td class="text-center text-danger">
                                         <h4><strong>Rs. ${order.grandTotal}</strong></h4>

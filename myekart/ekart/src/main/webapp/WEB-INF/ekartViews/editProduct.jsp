@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Edit Category</h1>  
+<h1 style="color:DodgerBlue;">Edit Category</h1>  
 <c:url value="/admin/updateProduct" var="url"></c:url>
        <form:form method="POST" action='${url }' modelAttribute="product" role="form" enctype="multipart/form-data">    
         <table >    
@@ -19,19 +19,19 @@
           
          <tr>    
           <td>productName :</td>    
-          <td><form:input path="productName" /></td>  
+          <td><form:input path="productName" required="true"/></td>  
          </tr>  
          <tr>    
           <td>productDesc :</td>    
-          <td><form:input path="productDesc" /></td>  
+          <td><form:input path="productDesc" required="true"/></td>  
          </tr>  
          <tr>    
           <td>price :</td>    
-          <td><form:input path="price" /></td>  
+          <td><form:input path="price"  pattern="(?=.*\d)"/></td>  
          </tr>  
           <tr>    
           <td>quantity :</td>    
-          <td><form:input path="quantity" /></td>  
+          <td><form:input path="quantity" pattern="(?=.*\d)" /></td>  
          </tr>
             <tr>
            <td><form:label path="image">Upload image</form:label></td>

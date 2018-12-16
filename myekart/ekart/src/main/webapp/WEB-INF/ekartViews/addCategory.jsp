@@ -10,14 +10,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Add Category</h1>  
+<h1 style="color:DodgerBlue;">Add Category</h1>  
        <form:form method="POST" action="/ekart/save">    
         <table >    
         <tr>  
         <td></td>    
          <tr>    
           <td>CategoryName : </td>   
-          <td><form:input path="categoryName"  /></td>  
+          <td><form:input path="categoryName" required="true"  /></td>  
          </tr>    
          <tr>    
           <tr>    

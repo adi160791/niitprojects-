@@ -6,6 +6,13 @@
    
  <title>Header</title>
    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+   <style>
+body 
+  {
+   
+  background-color: #e6e6e6;
+}
+</style>
   
   <c:set var="context" value="${pageContext.request.contextPath}"/>
 <nav class="navbar navbar-inverse">

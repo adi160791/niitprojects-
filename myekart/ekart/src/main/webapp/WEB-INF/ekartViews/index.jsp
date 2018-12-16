@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>WELCOME TO EKART</title>
 </head>
 <body>
 <h1><a href="viewcategory">view Category</a></h1>
