@@ -1,0 +1,70 @@
+<style>
+.button {
+  background-color: #D2ABF3; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+caption{
+color: black;
+position: center
+
+}
+table,td {
+  border: 0px solid turquoise;
+  background-color: #D2ABF3;
+  position: center;
+  padding: 4px;
+  color: black;
+  width: 100%
+}
+th, td {
+  padding: 25px;
+}
+
+
+</style>
+
+<div>
+<table align="center">
+
+<tr>
+<td colspan="3" align="center"></td>
+</tr>
+<tr>
+<td>USER-ID-<td><td>{{user.userId}}</td>
+</tr>
+
+<tr>
+<td>NAME-<td><td>{{user.name}}</td>
+</tr>
+<tr>
+<td>GENDER-<td><td>{{user.gender}}</td>
+</tr>
+<tr>
+<td>DATE OF BIRTH-<td><td>{{user.dob | date}}</td>
+</tr>
+<tr>
+<td>E-MAIL ID-<td><td>{{user.email}}</td>
+</tr>
+<tr>
+<td>ADDRESS-<td><td>{{user.address}}</td>
+</tr>
+<tr>
+<td>CONTACT NO. -<td><td>{{user.contactNo}}</td>
+</tr>
+
+
+
+<button class="btn btn-success"  ng-click="m.sendFriendRequest(user.userId)">send req</button>
+
+</table>
+</div>

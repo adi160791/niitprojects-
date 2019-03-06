@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WELCOME TO WORDOID</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" body ng-app="myApp">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+<div ng-controller="UserController as m">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  
+    <div class="container">
+    
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">WORDOID</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+         <ul class="navbar-nav ml-auto">
+        <li class="nav-item" ng-show="currentUser.role == 'USER' ">
+            <a class="nav-link js-scroll-trigger" href="#/viewUser">USERS</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER' ">
+            <a class="nav-link js-scroll-trigger" href="#/viewBlog">BLOG</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER' ">
+            <a class="nav-link js-scroll-trigger" href="#/viewForum">FORUM</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER' ">
+            <a class="nav-link js-scroll-trigger" href="#/viewJob">JOB</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER'">
+            <a class="nav-link js-scroll-trigger" href="#/viewFriend">FRIENDS</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER'">
+            <a class="nav-link js-scroll-trigger" href="#/chat">CHAT</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'ADMIN'">
+            <a class="nav-link js-scroll-trigger" href="#/viewBlog">VIEW BLOGS FOR APPROVAL</a>
+          </li>
+         <li class="nav-item" ng-show="currentUser.role == 'ADMIN'">
+            <a class="nav-link js-scroll-trigger" href="#/addJob">POST JOB</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER'">
+            <a class="nav-link js-scroll-trigger" href="#/FriendRequest">FRIEND REQUEST</a>
+          </li>
+           <li class="nav-item" ng-show="currentUser.role == 'USER'">
+            <a class="nav-link js-scroll-trigger" href="#/notificationindetail">NOTIFICATIONS</a>
+          </li>
+		  <li class="nav-item" ng-show="currentUser.role != 'USER'" ng-hide="currentUser.role == 'ADMIN'">
+            <a class="nav-link js-scroll-trigger" href="#/login">LOGIN</a>
+          </li>
+          <li class="nav-item" ng-show="currentUser.role == 'USER'" ng-hide="currentUser.role != 'ADMIN'">
+            <a class="nav-link js-scroll-trigger"href="#/login"  ng-click="m.logout(currentUser,currentUser.userId)" >LOGOUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>			
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+    
+    
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">WORDOID</h1>
+        <div>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">EXPLORE THE NEW ERA</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+   <!-- Projects Section -->
+  <section id="views" class="projects-section">
+    <div class="container">
+   
+   
+   
+   <div>
+   <ng-view></ng-view>
+	</div>
+	
+	
+	
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">INDIA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">adittya@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+9111111111</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+     
+    </div>
+  </footer>
+
+  
+
+
+<script src="js/myApp.js"></script>
+
+
+<script src="User/UserController.js"></script>
+<script src="User/UserService.js"></script>
+
+
+<script src="Blog/BlogService.js"></script>
+<script src="Blog/BlogController.js"></script>
+
+
+<script src="BlogComment/BlogCommentService.js"></script>
+<script src="BlogComment/BlogCommentController.js"></script>
+
+
+<script src="Forum/ForumService.js"></script>
+<script src="Forum/ForumController.js"></script>
+
+
+<script src="ForumComment/ForumCommentService.js"></script>
+<script src="ForumComment/ForumCommentController.js"></script>
+
+
+<script src="Job/JobController.js"></script>
+<script src="Job/JobService.js"></script>
+
+
+
+<script src="Friend/FriendController.js"></script>
+<script src="Friend/FriendService.js"></script>
+
+
+
+<script src="uploadImage/ImageController.js"></script>
+<script src="uploadImage/ImageService.js"></script>
+
+
+
+<script src="Notification/NotificationController.js"></script>
+<script src="Notification/NotificationService.js"></script>
+
+
+
+
+
+
+<script src="Chat/sockjs.js"></script>
+<script src="Chat/sockjs-0.3.4.js"></script>
+<script src="Chat/stomp.js"></script>
+<script src="Chat/ChatController.js"></script>
+<script src="Chat/ChatService.js"></script>
+</body>
+</html>

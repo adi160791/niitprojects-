@@ -1,0 +1,53 @@
+<style>
+
+caption{
+color: black;
+position: center
+
+}
+table,td {
+  border: 0px solid turquoise;
+  background-color: #ccff99;
+  position: center;
+  padding: 4px;
+  color: black;
+  width: 100%
+}
+th, td {
+  padding: 25px;
+}
+
+
+</style>
+
+
+<table align="center">
+
+<tr>
+<td colspan="3" align="center"></td>
+</tr>
+
+<div ng-repeat="BlogComment in blogcomment">
+<tr>
+<td>BLOGCOMMENT ID -<td><td>{{blogcomment.blogCommentId}}</td>
+</tr>
+<tr>
+<td>BLOG ID-<td><td>{{blogcomment.blogId}}</td>
+</tr>
+<tr>
+<td>BLOG USERID-<td><td>{{blogcomment.userId}}</td>
+</tr>
+<tr>
+<td>COMMENT DATE-<td><td>{{blogcomment.blogCommentDate | date }}</td>
+</tr>
+<tr>
+<td>COMMENT -<td><td>{{blogcomment.blogComment}}</td>
+</tr>
+<tr>
+<td>COMMENT BY-<td><td>{{blogcomment.userName}}</td>
+</tr>
+
+</table>
+
+</div>
+</div>
